@@ -92,10 +92,10 @@ def checkin(cfg: Config, use_vpn=True) -> None:
         dropdown_district(cfg.district),
         dropdown_inschool(cfg.inschool).add_child(
             dropdown_campus(cfg.campus),
-            dropdown_stay_in_school("住校内"),
-            dropdown_indorm("住校内学生宿舍"),
-            dropdown_building(cfg.building),
-            text_room(cfg.room)
+            dropdown_stay_in_school("不住校内No，Off  campus"),
+#             dropdown_indorm("住校内学生宿舍"),
+#             dropdown_building(cfg.building),
+#             text_room(cfg.room)
         ) if cfg.inschool.startswith("在校") else
         dropdown_inschool(cfg.inschool),
         dropdown_covid_test(),
